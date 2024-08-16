@@ -33,7 +33,8 @@ import androidx.navigation.NavController
 
 @Composable
 fun UpdateScreen(
-    modifier: Modifier = Modifier, navController: NavController,
+    modifier: Modifier = Modifier,
+    navController: NavController,
     viewModel: UserViewModel,
 ) {
     val context = LocalContext.current
@@ -41,7 +42,7 @@ fun UpdateScreen(
 
     Scaffold { padding ->
         Column(
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxSize()
                 .padding(padding),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -81,7 +82,6 @@ fun UpdateScreen(
                 Spacer(modifier = Modifier.width(10.dp))
                 Button(onClick = {
                     navController.navigate("trackerlist")
-
                 }) {
                     Text("View list of weeks")
                 }

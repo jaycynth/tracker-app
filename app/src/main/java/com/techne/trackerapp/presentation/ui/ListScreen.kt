@@ -58,7 +58,6 @@ fun ListScreen(
 
 @Composable
 fun ListItem(key: String, value: String) {
-
           Row(horizontalArrangement = Arrangement.SpaceAround) {
               Text(text = key)
               Spacer(modifier = Modifier.height(20.dp))
