@@ -1,4 +1,4 @@
-package com.techne.trackerapp.ui.theme
+package com.techne.trackerapp.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

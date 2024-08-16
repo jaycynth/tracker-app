@@ -1,4 +1,4 @@
-package com.techne.trackerapp.ui.theme
+package com.techne.trackerapp.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

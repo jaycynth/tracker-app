@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -66,4 +68,22 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    //Dagger - Hilt
+    implementation("com.google.dagger:hilt-android:2.49")
+    kapt ("com.google.dagger:hilt-android-compiler:2.49")
+    kapt ("androidx.hilt:hilt-compiler:1.2.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    //Room
+    val room_version = "2.6.1"
+    implementation ("androidx.room:room-runtime:$room_version")
+    implementation ("androidx.room:room-ktx:$room_version")
+    kapt ("androidx.room:room-compiler:$room_version")
+
+    //compose dep
+    implementation ("androidx.compose.material:material-icons-extended:1.6.7")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1")
+
 }
